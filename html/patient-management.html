@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriTrack - Patient Management</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/patient-management.css">
+</head>
+<body>
+    <header>
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h2>NutriTrack</h2>
+            </div>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="patient-management.html" class="active">Patient Management</a></li>
+                <li><a href="meal-plans.html">Meal Plans</a></li>
+                <li><a href="progress-tracking.html">Progress Tracking</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <h1>Patient Management</h1>
+
+        <!-- Search Bar -->
+        <input type="text" id="search-bar" placeholder="Search patients..." oninput="filterPatients()" />
+
+        <!-- Patient Form -->
+        <form id="patient-form">
+            <h2>Add / Edit Patient</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" required>
+
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" name="height" required>
+
+            <label for="medical-history">Medical History:</label>
+            <textarea id="medical-history" name="medical-history"></textarea>
+
+            <button type="submit">Add Patient</button>
+        </form>
+
+        <!-- Patient List -->
+        <h2>Patient List</h2>
+        <table id="patient-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Weight</th>
+                    <th>Height</th>
+                    <th>Medical History</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Patient data will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </main>
+
+    <script src="../js/patient-management.js"></script>
+</body>
+</html>

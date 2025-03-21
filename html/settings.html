@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriTrack - Settings</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/settings.css">
+</head>
+<body>
+    <header>
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h2>NutriTrack</h2>
+            </div>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="patient-management.html">Patient Management</a></li>
+                <li><a href="meal-plans.html">Meal Plans</a></li>
+                <li><a href="progress-tracking.html">Progress Tracking</a></li>
+                <li><a href="settings.html" class="active">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <h1>User Settings</h1>
+
+        <!-- Profile Settings Form -->
+        <section class="profile-settings">
+            <h2>Profile Settings</h2>
+            <form id="profile-form">
+                <label for="user-name">Full Name:</label>
+                <input type="text" id="user-name" name="user-name" required>
+
+                <label for="user-email">Email:</label>
+                <input type="email" id="user-email" name="user-email" required>
+
+                <button type="submit">Save Profile</button>
+            </form>
+        </section>
+
+        <!-- Privacy Settings Form -->
+        <section class="privacy-settings">
+            <h2>Privacy Settings</h2>
+            <form id="privacy-form">
+                <label for="data-sharing">Allow Data Sharing:</label>
+                <input type="checkbox" id="data-sharing" name="data-sharing">
+
+                <label for="email-notifications">Email Notifications:</label>
+                <input type="checkbox" id="email-notifications" name="email-notifications">
+
+                <button type="submit">Save Privacy Settings</button>
+            </form>
+        </section>
+
+        <!-- Preferences Settings Form -->
+        <section class="preferences-settings">
+            <h2>Preferences Settings</h2>
+            <form id="preferences-form">
+                <label for="theme">Theme:</label>
+                <select id="theme" name="theme">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </select>
+
+                <button type="submit">Save Preferences</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="../js/settings.js"></script>
+</body>
+</html>

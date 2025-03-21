@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriTrack - Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <header>
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h2>NutriTrack</h2>
+            </div>
+            <ul>
+                <li><a href="index.html" class="active">Dashboard</a></li>
+                <li><a href="patient-management.html">Patient Management</a></li>
+                <li><a href="meal-plans.html">Meal Plans</a></li>
+                <li><a href="progress-tracking.html">Progress Tracking</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <h1>Welcome to NutriTrack</h1>
+        <div id="dashboard-stats">
+            <div class="stat-card">
+                <h3>Total Patients</h3>
+                <p id="patient-count">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Total Meal Plans</h3>
+                <p id="meal-plan-count">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Progress Reports</h3>
+                <p id="progress-report-count">0</p>
+            </div>
+        </div>
+        <div id="recent-activity">
+            <h2>Recent Activities</h2>
+            <ul id="activity-list">
+                <!-- Activities will be dynamically inserted here -->
+            </ul>
+        </div>
+    </main>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

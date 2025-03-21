@@ -1,0 +1,80 @@
+/* Sidebar General Styling */
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--primary-dark); /* Dark green sidebar background */
+    color: var(--white);
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#sidebar .sidebar-header {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: var(--secondary-light); /* Lighter color for header text */
+}
+
+/* Sidebar Menu List Styling */
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar ul li {
+    padding: 12px 20px;
+    text-align: left;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+#sidebar ul li a {
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+#sidebar ul li a:hover {
+    background-color: var(--primary-color-dark); /* Darker green on hover */
+    padding-left: 25px; /* Adds a nice shift for interaction */
+}
+
+#sidebar ul li a.active {
+    background-color: var(--primary-color); /* Active menu item uses the main green */
+}
+
+/* Responsive Sidebar Styles */
+@media screen and (max-width: 768px) {
+    #sidebar {
+        width: 200px;
+        font-size: 1.1rem;
+    }
+
+    #sidebar ul li {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    #sidebar ul li {
+        text-align: center;
+    }
+
+    #sidebar ul li a {
+        padding: 15px 0;
+    }
+}
