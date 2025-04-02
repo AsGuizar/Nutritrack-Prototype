@@ -15,6 +15,7 @@ function loadPatients() {
             <td>${patient.weight}</td>
             <td>${patient.height}</td>
             <td>${patient.medicalHistory}</td>
+            <td>${patient.dateOfRegistration}</td> <!-- Display registration date -->
             <td>
                 <button onclick="editPatient(${index})">Edit</button>
                 <button onclick="deletePatient(${index})">Delete</button>
@@ -33,6 +34,7 @@ function handleFormSubmit(event) {
     const weight = document.getElementById("weight").value;
     const height = document.getElementById("height").value;
     const medicalHistory = document.getElementById("medical-history").value;
+    const dateOfRegistration = document.getElementById("date-of-registration").value; // Get the registration date
 
     // Create a new patient object
     const newPatient = {
@@ -40,7 +42,8 @@ function handleFormSubmit(event) {
         age,
         weight,
         height,
-        medicalHistory
+        medicalHistory,
+        dateOfRegistration // Add registration date
     };
 
     // Get existing patients from localStorage or initialize an empty array
@@ -76,6 +79,7 @@ function editPatient(index) {
     document.getElementById("weight").value = patient.weight;
     document.getElementById("height").value = patient.height;
     document.getElementById("medical-history").value = patient.medicalHistory;
+    document.getElementById("date-of-registration").value = patient.dateOfRegistration; // Set registration date
 
     // Set a custom data attribute to track the edit index
     patientForm.dataset.editIndex = index;

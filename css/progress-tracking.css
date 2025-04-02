@@ -1,121 +1,170 @@
-/* Progress Tracking Form Styling */
-form {
-    background-color: var(--white);
+/* Main styling for the progress tracking page */
+/* Form styling */
+#progress-form {
+    background-color: #f9f9f9;
     padding: 20px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    border-radius: 8px;
     margin-bottom: 30px;
-    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-form:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-form h2 {
-    margin-bottom: 20px;
-    font-size: 1.8rem;
-    color: var(--primary-color); /* Use primary color for better emphasis */
-    font-weight: 600;
-}
-
-/* Improved Label Styling */
-form label {
-    font-size: 1.2rem; /* Larger font for better readability */
-    margin-bottom: 8px;
-    display: block;
-    color: var(--primary-dark); /* Use dark primary for higher contrast */
-    font-weight: 500; /* Slightly bolder to make it stand out */
-}
-
-/* Input and Select Styling */
-form input, form select {
-    width: 100%;
-    padding: 12px;
+.form-group {
     margin-bottom: 15px;
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    box-sizing: border-box;
-    font-size: 1rem;
-    transition: border 0.3s ease;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
 }
 
-form input:focus, form select:focus {
-    border: 1px solid var(--primary-color);
-    outline: none;
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
 }
 
-/* Button Styling */
-form button {
-    padding: 12px 25px;
-    background-color: var(--primary-color);
-    color: var(--white);
+.button-group button {
+    padding: 10px 20px;
     border: none;
-    border-radius: var(--border-radius);
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
-form button:hover {
-    background-color: var(--primary-dark);
+.button-group button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
 }
 
-/* Progress List Table */
+.button-group button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.button-group button[type="button"] {
+    background-color: #f44336;
+    color: white;
+}
+
+.button-group button[type="button"]:hover {
+    background-color: #d32f2f;
+}
+
+/* Filter section styling */
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+}
+
+.date-filter {
+    display: flex;
+    gap: 15px;
+}
+
+/* Chart container styling */
+.chart-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    min-height: 300px;
+}
+
+#loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: #666;
+}
+
+/* Table styling */
+.table-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
 #progress-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 30px;
-    background-color: var(--white);
-    box-shadow: var(--box-shadow);
 }
 
 #progress-table th, #progress-table td {
-    padding: 12px;
-    border: 1px solid var(--border-color);
+    padding: 12px 15px;
     text-align: left;
-    font-size: 1rem;
+    border-bottom: 1px solid #ddd;
 }
 
 #progress-table th {
-    background-color: var(--primary-dark); /* Dark background for table header */
-    font-weight: 600;
-    color: var(--white); /* White text on dark background */
-}
-
-#progress-table td {
-    color: var(--text-dark);
+    background-color: #f2f2f2;
+    font-weight: bold;
 }
 
 #progress-table tr:hover {
-    background-color: var(--light-gray);
+    background-color: #f5f5f5;
 }
 
-/* Sidebar adjustments for active state */
-#sidebar ul li a.active {
-    background-color: var(--primary-color);
+/* Action buttons in table */
+.action-buttons {
+    display: flex;
+    gap: 8px;
 }
 
-/* Chart Container Styling */
-#progress-chart {
-    margin-top: 30px;
-    display: block;
-    max-width: 100%;
-    height: auto;
+.action-buttons button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
 }
 
-/* Global Styles */
-:root {
-    --primary-color: #4CAF50; /* Main green color */
-    --primary-dark: #2c3e50; /* Sidebar and dark background */
-    --secondary-light: #ecf0f1; /* Light text color */
-    --secondary-dark: #34495e; /* Darker hover background */
-    --white: #ffffff; /* White for text and borders */
-    --text-dark: #333333; /* Dark text for readability */
-    --border-radius: 8px; /* Rounded corners */
-    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* General shadow */
-    --font-family: 'Arial', sans-serif; /* Default font family */
-    --border-color: #ccc; /* Lighter border color */
-    --gray: #7f8c8d; /* Soft gray for text */
-    --light-gray: #f2f2f2; /* Light gray background */
+.edit-btn {
+    background-color: #2196F3;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .filter-container {
+        flex-direction: column;
+    }
+    
+    .date-filter {
+        margin-top: 15px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .button-group button {
+        width: 100%;
+    }
 }
